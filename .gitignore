@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Test results and reports
+allure-results/
+allure-report/
+reports/
+logs/
+
+# WebdriverIO artifacts
+.tmp/
+errorShots/
+screenshots/
+
+# Environment files
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
