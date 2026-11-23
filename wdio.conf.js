@@ -5,6 +5,8 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
+    // Headless Chrome needs no virtual display; disable WDIO's built-in xvfb wrapper
+    autoXvfb: false,
     //
     // ==================
     // Specify Test Files
