@@ -50,8 +50,14 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
-    }],
+    browserName: 'chrome',
+    'goog:chromeOptions': {
+        // Headless Chrome on CI runners (no display); local runs stay unchanged
+        args: process.env.CI
+            ? ['--headless=new', '--window-size=1920,1080', '--no-sandbox', '--disable-dev-shm-usage']
+            : []
+    }
+}],
 
     //
     // ===================
